@@ -1,0 +1,68 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>340c8a01-ccf1-4371-ae30-dc61b1bbdedc</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>EXTENSIONS\FaceDetection\FaceDetection.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>FaceIdentity</Name>
+    <RootNamespace>FaceDetection</RootNamespace>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda37-64</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="EXTENSIONS\Analysis128D\RecoFromCamAnalysis128D.py" />
+    <Compile Include="EXTENSIONS\FaceDataTraining\FaceDataTraining.py" />
+    <Compile Include="EXTENSIONS\FaceDetection\FaceDetection.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EXTENSIONS\FaceDCal\Faces128DCal.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EXTENSIONS\RootForm\RootForm.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InstallStep.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\data_dlib\" />
+    <Folder Include="EXTENSIONS\" />
+    <Folder Include="EXTENSIONS\FaceDCal\" />
+    <Folder Include="EXTENSIONS\FaceDetection\" />
+    <Folder Include="EXTENSIONS\Analysis128D\" />
+    <Folder Include="EXTENSIONS\FaceDataTraining\" />
+    <Folder Include="EXTENSIONS\RootForm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda37-64" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\data_dlib\dlib_face_recognition_resnet_model_v1.dat" />
+    <Content Include="data\data_dlib\shape_predictor_5_face_landmarks.dat" />
+    <Content Include="data\data_dlib\shape_predictor_68_face_landmarks.dat" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
