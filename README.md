@@ -1,5 +1,13 @@
 #   功能說明  #
 臉部追蹤、辨識、資料訓練
+1. 支持多臉人臉追蹤
+2. 支持多臉人臉辨識
+3. features_all.csv內可自訂人臉名稱
+4. 按下「s」支持一鍵訓練
+4. 按下「q」可離開
+
+# Demo #
+![image](https://i.imgur.com/NqwehW8.png)
 
 #   Windows 10 system install dlib package  #
 
