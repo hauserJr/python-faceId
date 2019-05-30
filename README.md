@@ -1,5 +1,6 @@
 #   功能說明  #
 臉部追蹤、辨識、資料訓練
+執行檔案為：EXTENSIONS/FaceDetection/FaceDetection.py
 1. 支持多臉人臉追蹤
 2. 支持多臉人臉辨識
 3. features_all.csv內可自訂人臉名稱
